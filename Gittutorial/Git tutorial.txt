@@ -1,0 +1,87 @@
+Git tutorial
+1)create account in www.github.com
+2)create repository for the project - allow Readme file for changes
+3)Default It will come has the readme file
+4)Download vscode and git 
+	vscode - https://code.visualstudio.com/
+	git - https://git-scm.com/downloads
+5)configuring git  (Global: For system level,local: For a specific repo )
+	open git bash ~ - tild symbol it will show the root directory of the folder
+	git --version 
+	git config --global user.name "Git user name"
+	git config --global user.email "example@gmail.com"
+	git config --list
+6)Create the empty folder in desktop and open in vscode 
+7)Open terminal and check the connection of the git in the vscode terminal 
+	git -v or git --version
+8)Clone - clonning a repository in a local machine 
+	remote: Github - repo copy it will come all files and and folders in to our local 
+	local: laptop
+	git clone <-some link->
+9)Status - Display the status of the code 
+	git status 
+10)Change the directory with the comand 
+	cd - change directory (if you click the tab automatically it will take the fil/folder name)
+11)ls - list the files in the folder 
+12)ls -a : It will list out the hiden files 
+13)Modify the Readme file you will get in M - Modified 
+14)Add one file it will get like U - Untraked file 
+15)Types of status messages
+	There are four types of message
+		a)untracked - new file that git doesn't yet track
+		b)modified - changed
+		c)staged - file is ready to be committed 
+		d)unmodified - unchanged 
+16)Add - Adds new or changed files in your working directory to the git staging area 
+	git add <-file name->
+	If you need to add more file at a time 
+	git add .
+17)Commit - it is the record of the changes 
+	git commit -m "some message"
+18)push - upload local repo content to remote repo 
+	git push origin main 
+		
+		INIT - COMMANDS
+19)init - used to create a new git repo
+	git init
+	git remote add origin <-link->
+	git remote -v (to verify remote)
+	git branch (to check branch)
+	git branch -M main (to rename branch)
+	git push -u origin main (u:origin main)
+	To create a new folder command is like
+		mkdir - make directory <-folder name->
+		BRANCH - COMMANDS
+20)Branch - commands
+	git branch (to check branch)
+	git branch -M main (to rename branch)
+	git checkout <-branch name-> (to navigate)
+	git checkout -b <-new branch name-> (to create new branch)
+	git checkout -d <-branch name-> (to delete branch)
+	
+		MERGING - CODE
+21)Merging code 
+	way - 1
+		git diff <-branch name-> (to compare commits, branches, files and more)
+		git merge <-branch name-> (to merge 2 branches)
+		
+	way - 2
+		Create PR (Pull Request)
+		It let you tell others about changes you've pushed to a branch in a repository in github
+22)Pull - request
+	git pull origin main
+	used to fetch and download content from a remote repo and immediatly update the local repo to match that content 
+23)Resolving merge conflects 
+	An event that takes place when git is unable to automatically resolve difference in code between the commits 
+24)Undoing changes
+	Case1: Staged changes
+		git reset <-file name->
+		get reset
+	Case2 : commited changes (for one commit)
+		git reset HEAD~1 
+	Case3 : commited chages (for many commit)
+		git reset <-commit hash->
+		git reset --hard <-commit hash->
+25)Fork
+	A fork is a new repository that shares code and visibility settings with the original "upstream" repository 
+	Fork is a rough copy 
